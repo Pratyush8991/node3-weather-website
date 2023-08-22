@@ -11,7 +11,7 @@ const forecast = (latitude, longitude, callback) => {
         }
         else{
             let jsonVar = body.current
-            callback(undefined, jsonVar.weather_descriptions[0] + ". It is currently " + jsonVar.temperature + " degrees out. It feels like " + jsonVar.feelslike + " degrees out.")
+            callback(undefined, jsonVar.weather_descriptions[0] + ". It is currently " + jsonVar.temperature + " degrees out. It feels like " + jsonVar.feelslike + " degrees out." + "There is a " + jsonVar.precip * 100 + " % chance of rain today.")
         }
     })
 }
